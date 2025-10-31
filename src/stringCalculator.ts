@@ -3,11 +3,14 @@ const evalExpression = (input: string): number => {
 
   const sanitizedInput = input.replace(/\n/g, ",");
 
-  return sanitizedInput.split(",").reduce((acc, curr) => {
-    const tempNumber = Number(curr);
-    const currNumber = isNaN(tempNumber) ? 0 : tempNumber;
-    return acc + currNumber;
-  }, 0);
+  return sanitizedInput
+    .split(",")
+    .map((x) => x.trim())
+    .reduce((acc, curr) => {
+      const tempNumber = Number(curr);
+      const currNumber = isNaN(tempNumber) ? 0 : tempNumber;
+      return acc + currNumber;
+    }, 0);
 };
 
 export default evalExpression;
