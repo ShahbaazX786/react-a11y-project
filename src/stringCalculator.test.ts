@@ -27,4 +27,10 @@ describe("String Calculator", () => {
     expect(evalExpression("5,10,10")).not.toBe(null);
     expect(evalExpression("5,10,10")).not.toBe(NaN);
   });
+
+  it("should calculate and return result with newline delimiter", () => {
+    expect(evalExpression("1\n2,3")).toBe(6);
+    expect(evalExpression("1\n2,\n3")).toBe(6);
+    expect(evalExpression("\n1\n2,\n3")).toBe(6);
+  });
 });
