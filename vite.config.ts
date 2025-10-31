@@ -5,6 +5,7 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  // @ts-expect-error
   test: {
     globals: true,
     environment: "jsdom",
