@@ -40,17 +40,12 @@ const App = () => {
         onChange={(e) => setInput(e.target.value)}
       />
 
-      <div
+      <button
         onClick={handleCalculate}
-        className="w-36 rounded-4xl text-center p-2.5 bg-[#008cba]"
-        style={{
-          color: "#fff",
-          border: "none",
-          cursor: "pointer",
-        }}
+        className="w-36 rounded-full text-center py-2.5 bg-[#008cba] text-white hover:bg-[#0074a3] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 transition cursor-pointer"
       >
         Calculate
-      </div>
+      </button>
 
       {result !== null && <p className="text-green-500">Result: {result}</p>}
 
