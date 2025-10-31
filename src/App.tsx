@@ -1,10 +1,19 @@
 import { useState } from "react";
+import evalExpression from "./stringCalculator";
 
 const App = () => {
   const [input, setInput] = useState<string>("");
-  const [result] = useState<number | null>(null);
+  const [result, setResult] = useState<number | null>(null);
 
-  const handleCalculate = () => {};
+  const handleCalculate = () => {
+    try {
+      const result = evalExpression(input);
+      setResult(result);
+    } catch (e) {
+      alert("Invalid String");
+      console.log("Invalid Expression, Please check your string", e);
+    }
+  };
 
   return (
     <div style={{ padding: "20px", backgroundColor: "#fff", color: "#aaa" }}>
