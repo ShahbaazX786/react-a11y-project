@@ -16,7 +16,21 @@ const App = () => {
   };
 
   return (
-    <div style={{ padding: "20px", backgroundColor: "#fff", color: "#aaa" }}>
+    <div
+      style={{
+        padding: "20px",
+        backgroundColor: "#fff",
+        color: "#aaa",
+        margin: "auto",
+        maxWidth: "600px",
+        maxHeight: "100%",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "10px",
+      }}
+    >
       <img
         src="https://images.unsplash.com/photo-1594352161389-11756265d1b5?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         width={600}
@@ -37,10 +51,14 @@ const App = () => {
       <div
         onClick={handleCalculate}
         style={{
+          width: "150px",
+          borderRadius: "50px",
+          textAlign: "center",
           padding: "10px",
           backgroundColor: "#008cba",
           color: "#fff",
           border: "none",
+          cursor: "pointer",
         }}
       >
         Calculate
