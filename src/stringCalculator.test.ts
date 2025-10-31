@@ -33,4 +33,10 @@ describe("String Calculator", () => {
     expect(evalExpression("1\n2,\n3")).toBe(6);
     expect(evalExpression("\n1\n2,\n3")).toBe(6);
   });
+
+  it("should calculate and return result while ignoring spaces", () => {
+    expect(evalExpression("   1 ,  2, 3 ")).toBe(6);
+    expect(evalExpression(" 1 ,  2 ,4 ")).toBe(7);
+    expect(evalExpression("   1 \n,         2,5       ")).toBe(8);
+  });
 });
