@@ -3,7 +3,9 @@ const evalExpression = (input: string): number => {
 
   if (input && input.includes(",")) {
     return input.split(",").reduce((acc, curr) => {
-      return acc + Number(curr);
+      const tempNumber = Number(curr);
+      const currNumber = isNaN(tempNumber) ? 0 : tempNumber;
+      return acc + currNumber;
     }, 0);
   }
 
