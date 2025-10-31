@@ -24,11 +24,13 @@ const App = () => {
         height={400}
       />
 
-      <h2>String Calculator</h2>
+      <h1 className="text-2xl font-semibold mt-4">String Calculator</h1>
 
-      <h1 className="text-xl">Enter numbers</h1>
-
+      <label htmlFor="expression" className="text-xl">
+        Enter numbers
+      </label>
       <textarea
+        id="expression"
         className="my-2.5 text-[#aaa] border p-0.5"
         style={{ margin: "10px 0", color: "#aaa" }}
         placeholder="Enter your expression here"
