@@ -4,8 +4,23 @@ import evalExpression from "./stringCalculator";
 describe("String Calculator", () => {
   it("should return a single number", () => {
     expect(evalExpression("5")).toBe(5);
+    expect(evalExpression("5")).not.toBe(500);
+    expect(evalExpression("5")).not.toBe(0);
+    expect(evalExpression("5")).not.toBe(null);
   });
-  it("should not return empty string", () => {
-    expect(evalExpression("")).not.toBe("");
+
+  it("should return 0 for nullish or falsy values", () => {
+    expect(evalExpression("")).toBe(0);
+    expect(evalExpression("")).toBeFalsy();
+    expect(evalExpression("")).not.toBe(NaN);
+    expect(evalExpression("")).not.toBe(null);
+  });
+
+  it("should sum by default and return result of two or more numbers", () => {
+    expect(evalExpression("5, 10")).toBe(15);
+    expect(evalExpression("5,10,10")).not.toBe(0);
+    expect(evalExpression("5,10,10")).not.toBe(undefined);
+    expect(evalExpression("5,10,10")).not.toBe(null);
+    expect(evalExpression("5,10,10")).not.toBe(NaN);
   });
 });
