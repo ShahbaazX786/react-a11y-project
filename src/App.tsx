@@ -35,6 +35,8 @@ const App = () => {
         style={{ margin: "10px 0", color: "#aaa" }}
         placeholder="Enter your expression here"
         value={input}
+        aria-describedby="expressionHelp"
+        rows={3}
         onChange={(e) => setInput(e.target.value)}
       />
 
@@ -52,8 +54,12 @@ const App = () => {
 
       {result !== null && <p className="text-green-500">Result: {result}</p>}
 
-      <div role="alert">
-        <p>Make sure you enter numbers correctly!</p>
+      <div
+        role="alert"
+        id="expressionHelp"
+        className="text-sm text-gray-500 mt-1"
+      >
+        Make sure you enter valid numbers or arithmetic expressions.
       </div>
     </div>
   );
