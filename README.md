@@ -43,3 +43,39 @@ This project contains a **String Calculator template** built using React. The pr
 
 - Implement the functionality of the String Calculator following TDD best practices.
 - Resolve accessibility issues in the `App.tsx`.
+
+## Update
+
+##### Below are the things which are fixed.
+
+- Accessibility issues.
+  1.  Color Contrast
+  2.  Typography
+  3.  Semantics
+  4.  Readability (for screen readers)
+  5.  Missing Skip to main content button.
+
+##### Improvements made:
+
+- Added Tailwindcss
+- Added types.
+- Added string evaluation logic based on operators.
+- Deployed over vercel.
+- Unit Tests (All passing)
+- Added vitest coverage to get code coverage.
+
+##### Tools Used to test A11y:
+
+- Windows Narrator.
+- SiteImprove plugin.
+- Axe Devtools.
+- Stylus plugin.
+
+### App Screenshot
+
+![App Screenshot](screenshots/Image1.png)
+
+### Code Coverage:
+
+![CC Screenshot1](screenshots/Image2.png)
+![CC Screenshot2](screenshots/Image3.png)
