@@ -32,6 +32,7 @@ const App = () => {
           src="https://images.unsplash.com/photo-1594352161389-11756265d1b5?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           width={600}
           height={400}
+          className="rounded-lg"
         />
 
         <h1 className="text-2xl font-semibold mt-4">String Calculator</h1>
@@ -57,7 +58,10 @@ const App = () => {
         </button>
 
         {result !== null && (
-          <p className="text-green-600 text-balance leading-normal">
+          <p
+            className="text-green-600 text-balance leading-normal"
+            role="status"
+          >
             Result: {result}
           </p>
         )}
