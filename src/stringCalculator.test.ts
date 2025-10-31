@@ -39,4 +39,12 @@ describe("String Calculator", () => {
     expect(evalExpression(" 1 ,  2 ,4 ")).toBe(7);
     expect(evalExpression("   1 \n,         2,5       ")).toBe(8);
   });
+
+  it("should calculate arithmetic operations and return result.", () => {
+    expect(evalExpression("1+2")).toBe(3);
+    expect(evalExpression("2*2")).toBe(4);
+    expect(evalExpression("10-5")).toBe(5);
+    expect(evalExpression("12/2")).toBe(6);
+    expect(evalExpression("1+2*3")).toBe(7);
+  });
 });
